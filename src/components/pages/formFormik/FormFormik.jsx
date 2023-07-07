@@ -18,18 +18,18 @@ const FormFormik = () => {
     validateOnChange: false,
     validationSchema: Yup.object({
       nombre: Yup.string()
-        .required("Este campo es requerido")
-        .min(3, "el campo debe tener al menos 3 caracteres"),
+        .required("Este campo es obligatorio")
+        .min(3, "Debe contener al menos 3 caracteres"),
       email: Yup.string()
-        .email("no corresponde a un email valido")
-        .required("es obligatorio"),
+        .email("No corresponde a un email valido")
+        .required("Este campo es obligatorio"),
       password: Yup.string()
-        .required("requerido")
+        .required("Este campo es obligatorio")
         .matches(/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{6,15}$/, {
           message: "la contaseña debe tener,1 mayuscula, 1 minuscula etc etc",
         }),
       repetPassword: Yup.string()
-        .required("requerido")
+        .required("Este campo es obligatorio")
         .oneOf([Yup.ref("password")], "Las contraseñas no coinciden"),
     }),
   });
