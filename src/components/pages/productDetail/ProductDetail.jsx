@@ -14,7 +14,11 @@ const ProductDetail = ({ productSelected }) => {
     <>
       <div>
         <h2>{productSelected.title}</h2>
-        <img src={productSelected.img} alt="" />
+        <img
+          src={productSelected.img}
+          alt=""
+          style={{ width: "350px", height: "auto" }}
+        />
       </div>
       {productSelected.stock > 0 ? (
         <ItemCount stock={productSelected.stock} initial={1} onAdd={onAdd} />
