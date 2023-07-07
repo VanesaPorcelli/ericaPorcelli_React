@@ -1,32 +1,32 @@
-import ProductsListContainer from "../pages/productsList/ProductsListContainer"
-import ProductDetailContainer from "../pages/productDetail/ProductDetailContainer"
 import CartContainer from "../pages/cart/CartContainer"
-import Form from "../pages/Form/Form"
+import FormFormik from "../pages/formFormik/FormFormik"
+import ProductDetailContainer from "../pages/productDetail/ProductDetailContainer"
+import ProductsListContainer from "../pages/productsList/ProductsListContainer"
 
-export const menuRoutes=[
+export const menuRoutes = [
     {
-        id:"home",
-        path:"/",
+        id: "home",
+        path: "/",
         Element: ProductsListContainer
     },
     {
-        id:"categories",
+        id: "categories",
         path: "/category/:categoryName",
         Element: ProductsListContainer
     },
     {
-        id:"itemDetail",
+        id: "itemDetail",
         path: "/itemDetail/:id",
         Element: ProductDetailContainer
     },
     {
-        id:"cart",
+        id: "carrito",
         path: "/carrito",
         Element: CartContainer
     },
     {
-        id:"form",
-        path: "/form",
-        Element: Form
+        id: "formik",
+        path: "/formik",
+        Element: FormFormik
     },
 ]
