@@ -1,29 +1,20 @@
 import { ItemCount } from "../../common/ItemCount";
 
-const ProductDetail = ({ productSelected }) => {
-  const onAdd = (cantidad) => {
-    let data = {
-      ...productSelected,
-      quantity: cantidad,
-    };
-
-    console.log(data);
-  };
-
+const ProductDetail = ({ productSelected, cantidad, onAdd }) => {
   return (
     <>
       <div>
         <h2>{productSelected.title}</h2>
-        <img
-          src={productSelected.img}
-          alt=""
-          style={{ width: "350px", height: "auto" }}
-        />
+        <img src={productSelected.img} alt="" />
       </div>
       {productSelected.stock > 0 ? (
-        <ItemCount stock={productSelected.stock} initial={1} onAdd={onAdd} />
+        <ItemCount
+          stock={productSelected.stock}
+          initial={cantidad}
+          onAdd={onAdd}
+        />
       ) : (
-        <h3>Momentáneamente no hay stock</h3>
+        <h3>No hay stock</h3>
       )}
     </>
   );
