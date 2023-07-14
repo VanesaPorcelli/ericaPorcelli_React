@@ -1,9 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import ProductDetail from "./ProductDetail";
-import { products } from "../../../productsMock";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
+import { dataBase } from "../../../firebaseConfig";
+import { collection, getDoc, doc } from "firebase/firestore";
+
+
 
 const ProductDetailContainer = () => {
   const [productSelected, setProductSelect] = useState({});
@@ -25,30 +28,32 @@ const ProductDetailContainer = () => {
       icon: "success",
       title: "Producto agregado con éxito!",
       showConfirmButton: false,
-      timer: 1800,
+      timer: 1200,
     });
   };
 
   useEffect(() => {
-    let productFind = products.find((product) => product.id === +id);
-
-    const getProduct = new Promise((res) => {
-      res(productFind);
+    let itemCollection = collection(dataBase, "products");
+    let refDoc = doc(itemCollection, id);
+    getDoc(refDoc).then((res) => {
+      setProductSelect({ ...res.data(), id: res.id });
     });
-
-    getProduct
-      .then((res) => setProductSelect(res))
-      .catch((err) => console.log(err));
   }, [id]);
 
   return (
-    <ProductDetail
-      cantidad={cantidad}
-      productSelected={productSelected}
-      addToCart={addToCart}
-      onAdd={onAdd}
-    />
+    <div>
+      {productSelected.id ? (
+        <ProductDetail
+          cantidad={cantidad}
+          productSelected={productSelected}
+          addToCart={addToCart}
+          onAdd={onAdd}
+        />
+      ) : (
+        <h1></h1>
+      )}
+    </div>
   );
 };
 
-export default ProductDetailContainer;
+export default ProductDetailContainer;  

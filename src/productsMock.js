@@ -28,7 +28,6 @@ export const products = [
         img: "https://img.freepik.com/foto-gratis/pistachos_1368-9181.jpg?size=626&ext=jpg&ga=GA1.1.1988290561.1677557952&semt=sph"
     },
     {
-        id: 4,
         title: "Lentejas",
         price: 900,
         stock: 15,
@@ -37,7 +36,6 @@ export const products = [
         img: "https://img.freepik.com/foto-gratis/lentejas_1368-8874.jpg?size=626&ext=jpg&ga=GA1.1.1988290561.1677557952&semt=sph"
     },
     {
-        id: 5,
         title: "Garbanzos",
         price: 1200,
         stock: 10,
@@ -46,7 +44,6 @@ export const products = [
         img: "https://img.freepik.com/foto-gratis/tiro-macro-soja-aislar-sobre-fondo_93675-131855.jpg?size=626&ext=jpg&ga=GA1.1.1988290561.1677557952&semt=sph"
     },
     {
-        id: 6,
         title: "Porotos Rojos",
         price: 1400,
         stock: 16,
@@ -55,16 +52,14 @@ export const products = [
         img: "https://img.freepik.com/foto-gratis/fondo-frijoles-rojos_1150-35285.jpg?w=740&t=st=1686846853~exp=1686847453~hmac=96347d37273eec2a6c53f8975a43f9795592050c7a3e6652b70fd8005e5a8464"
     },
     {
-        id: 7,
         title: "Arroz Integral",
-        price: 1400,
+        price: 1200,
         stock: 16,
         description: "Envasados por Kilo",
         category: "Cereales",
         img: "https://img.freepik.com/foto-gratis/avena-pelada_1368-5471.jpg?size=626&ext=jpg&ga=GA1.1.1988290561.1677557952&semt=sph"
     },
     {
-        id: 8,
         title: "Avena",
         price: 1500,
         stock: 18,
@@ -73,7 +68,6 @@ export const products = [
         img: "https://img.freepik.com/foto-gratis/superficie-avena_144627-34399.jpg?size=626&ext=jpg&ga=GA1.1.1988290561.1677557952&semt=sph"
     },
     {
-        id: 9,
         title: "Hojuelas de Maiz",
         price: 1150,
         stock: 0,

@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <>
       <div className={styles.containerNavbar}>
-        <Link to="/">Comision-43240</Link>
+        <Link to="/">Tukura- Conciencia Alimentaria</Link>
         <ul className={styles.categories}>
           {menuNavigate.map(({ id, path, title }) => (
             <Link key={id} to={path}>

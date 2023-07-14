@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { menuRoutes } from "./components/routes/menuRoutes";
 import CartContextProvider from "./context/CartContext";
 
+
 const App = () => {
   return (
     <BrowserRouter>
