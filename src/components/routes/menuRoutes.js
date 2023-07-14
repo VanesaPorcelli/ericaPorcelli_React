@@ -8,7 +8,7 @@ export const menuRoutes = [
     {
         id: "home",
         path: "/",
-        Element: ProductsListContainer 
+        Element: ProductsListContainer
     },
     {
         id: "categories",
@@ -34,5 +34,6 @@ export const menuRoutes = [
         id: "checkout",
         path: "/checkout",
         Element: CheckoutContainer
-    }
+    },
+
 ]
