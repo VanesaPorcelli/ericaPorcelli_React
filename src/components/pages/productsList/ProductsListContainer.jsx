@@ -44,7 +44,7 @@ const ProductsListContainer = () => {
           alignItems: "center",
         }}
       >
-        <GridLoader eLoader color="orange" width={60} height={111} />
+        <GridLoader color="orange" width={60} height={111} />
       </div>
     );
   }
@@ -55,7 +55,7 @@ const ProductsListContainer = () => {
       {/* {items.length > 0 ? (
         <ProductsListPresentacional items={items} />
       ) : (
-        <ScaleLoader cssOverride={objetoLoader} color="#36d7b7" />
+        <Scaleloader cssOverride={objetoLoader} color="#36d7b7" />
       )} */}
 
       {/* {items.length > 0 && <ProductsListPresentacional items={items} />} */}
