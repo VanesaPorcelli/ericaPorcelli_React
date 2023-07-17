@@ -18,6 +18,7 @@ const CheckoutContainer = () => {
     initialValues: {
       name: "",
       email: "",
+      emailRepeat: "",
       phone: "",
     },
 
@@ -49,6 +50,9 @@ const CheckoutContainer = () => {
         .min(3, "Este campo debe contener al menos 3 caracteres"),
       email: Yup.string()
         .email("No corresponde a un email valido")
+        .required("Este campo es obligatorio"),
+      emailRepeat: Yup.string()
+        .oneOf([Yup.ref("email")], "Los correos electrónicos deben coincidir")
         .required("Este campo es obligatorio"),
       phone: Yup.string()
         .required("Este campo es obligatorio")
